@@ -70,7 +70,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 85);
+            this.groupBox1.Size = new System.Drawing.Size(257, 77);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lado 1";
@@ -82,7 +82,7 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(447, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(230, 85);
+            this.groupBox2.Size = new System.Drawing.Size(230, 77);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lado 2";
@@ -103,12 +103,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(8, 8);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.panel1.Size = new System.Drawing.Size(677, 85);
             this.panel1.TabIndex = 6;
             // 
             // lbResposta
             // 
-            this.lbResposta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbResposta.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbResposta.Location = new System.Drawing.Point(8, 148);
             this.lbResposta.Name = "lbResposta";
@@ -116,9 +116,11 @@
             this.lbResposta.TabIndex = 1;
             this.lbResposta.Text = "resultado";
             this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResposta.UseCompatibleTextRendering = true;
             // 
             // btnCalcular
             // 
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.ForeColor = System.Drawing.Color.SeaGreen;
