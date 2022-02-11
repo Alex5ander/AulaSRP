@@ -16,5 +16,14 @@ namespace prjRetanguloSRP.visao
         {
             InitializeComponent();
         }
+
+        modelo.RetanguloMatematico ret;
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            ret = new modelo.RetanguloMatematico(Double.Parse(txtL1.Text), Double.Parse(txtL2.Text));
+
+            lbResposta.Text = "Área: "+ret.Area().ToString()+" Perimetro: "+ret.Perimetro().ToString();
+        }
     }
 }
