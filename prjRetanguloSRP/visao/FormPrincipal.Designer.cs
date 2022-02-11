@@ -67,6 +67,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtL1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(257, 85);
@@ -78,6 +79,7 @@
             // 
             this.groupBox2.Controls.Add(this.txtL2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(447, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(230, 85);
@@ -118,6 +120,8 @@
             // btnCalcular
             // 
             this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCalcular.Location = new System.Drawing.Point(8, 93);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(8);
             this.btnCalcular.Name = "btnCalcular";
