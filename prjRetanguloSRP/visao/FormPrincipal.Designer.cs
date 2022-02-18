@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.pnSuperior = new System.Windows.Forms.Panel();
-            this.txtL1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lbResposta = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtL2 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbResposta = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtL1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnSuperior.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnSuperior
@@ -51,29 +52,45 @@
             this.pnSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Padding = new System.Windows.Forms.Padding(8);
-            this.pnSuperior.Size = new System.Drawing.Size(693, 193);
+            this.pnSuperior.Size = new System.Drawing.Size(693, 172);
             this.pnSuperior.TabIndex = 0;
             // 
-            // txtL1
+            // btnCalcular
             // 
-            this.txtL1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtL1.Location = new System.Drawing.Point(3, 27);
-            this.txtL1.Name = "txtL1";
-            this.txtL1.Size = new System.Drawing.Size(251, 31);
-            this.txtL1.TabIndex = 1;
-            this.txtL1.Text = "0";
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCalcular.Location = new System.Drawing.Point(8, 93);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(8);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(677, 37);
+            this.btnCalcular.TabIndex = 7;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // groupBox1
+            // lbResposta
             // 
-            this.groupBox1.Controls.Add(this.txtL1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 77);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lado 1";
+            this.lbResposta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbResposta.Location = new System.Drawing.Point(8, 127);
+            this.lbResposta.Name = "lbResposta";
+            this.lbResposta.Size = new System.Drawing.Size(677, 37);
+            this.lbResposta.TabIndex = 1;
+            this.lbResposta.Text = "resultado";
+            this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResposta.UseCompatibleTextRendering = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.panel1.Size = new System.Drawing.Size(677, 85);
+            this.panel1.TabIndex = 6;
             // 
             // groupBox2
             // 
@@ -96,61 +113,55 @@
             this.txtL2.TabIndex = 1;
             this.txtL2.Text = "0";
             // 
-            // panel1
+            // groupBox1
             // 
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel1.Size = new System.Drawing.Size(677, 85);
-            this.panel1.TabIndex = 6;
+            this.groupBox1.Controls.Add(this.txtL1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(257, 77);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lado 1";
             // 
-            // lbResposta
+            // txtL1
             // 
-            this.lbResposta.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbResposta.Location = new System.Drawing.Point(8, 148);
-            this.lbResposta.Name = "lbResposta";
-            this.lbResposta.Size = new System.Drawing.Size(677, 37);
-            this.lbResposta.TabIndex = 1;
-            this.lbResposta.Text = "resultado";
-            this.lbResposta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbResposta.UseCompatibleTextRendering = true;
+            this.txtL1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtL1.Location = new System.Drawing.Point(3, 27);
+            this.txtL1.Name = "txtL1";
+            this.txtL1.Size = new System.Drawing.Size(251, 31);
+            this.txtL1.TabIndex = 1;
+            this.txtL1.Text = "0";
             // 
-            // btnCalcular
+            // panel2
             // 
-            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCalcular.Location = new System.Drawing.Point(8, 93);
-            this.btnCalcular.Margin = new System.Windows.Forms.Padding(8);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(677, 44);
-            this.btnCalcular.TabIndex = 7;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 172);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(693, 271);
+            this.panel2.TabIndex = 1;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 443);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnSuperior);
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnSuperior.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +176,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lbResposta;
+        private System.Windows.Forms.Panel panel2;
     }
 }
