@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnSuperior = new System.Windows.Forms.Panel();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,6 +40,7 @@
             this.btnPlotar = new System.Windows.Forms.Button();
             this.lbResposta = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnSuperior.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -134,6 +136,7 @@
             this.tela.Name = "tela";
             this.tela.Size = new System.Drawing.Size(693, 226);
             this.tela.TabIndex = 1;
+            this.tela.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tela_MouseClick);
             this.tela.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tela_MouseMove);
             // 
             // btnPlotar
@@ -175,6 +178,12 @@
             this.panel2.Size = new System.Drawing.Size(677, 64);
             this.panel2.TabIndex = 2;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 30;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -212,5 +221,6 @@
         private System.Windows.Forms.Button btnPlotar;
         private System.Windows.Forms.Label lbResposta;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer;
     }
 }

@@ -17,6 +17,9 @@ namespace prjRetanguloSRP.visao
             InitializeComponent();
         }
 
+        int x = 0;
+        int y = 0;
+
         modelo.RetanguloMatematico ret;
         controle.RetanguloGrafico RG;
 
@@ -40,7 +43,8 @@ namespace prjRetanguloSRP.visao
 
         private void tela_MouseClick(object sender, MouseEventArgs e)
         {
-
+            x = 0;
+            y = 0;
         }
 
         private void tela_MouseMove(object sender, MouseEventArgs e)
@@ -49,6 +53,18 @@ namespace prjRetanguloSRP.visao
             {
                 int x = (int) (e.X - ret.L1 / 2);
                 int y = (int) (e.Y - ret.L2 / 2);
+                //RG.Desenhar(x, y, tela.CreateGraphics());
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (RG != null)
+            {
+                x += 10;
+                y += 2;
+
+                
                 RG.Desenhar(x, y, tela.CreateGraphics());
             }
         }
